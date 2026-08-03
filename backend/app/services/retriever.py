@@ -12,7 +12,6 @@ def retrieve_relevant_chunks(
         query_embedding,
         top_k
     )
-
     relevant_chunks = []
 
     for index_number in indices[0]:

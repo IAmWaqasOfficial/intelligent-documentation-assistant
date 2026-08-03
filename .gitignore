@@ -1,0 +1,81 @@
+# =============================================================
+# Intelligent Documentation Assistant — Root .gitignore
+# =============================================================
+
+# ── Virtual Environments ─────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+backend/venv/
+frontend/venv/
+
+# ── Python Cache & Compiled Files ────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.pyo
+*.pyc
+
+# ── Distribution / Build ─────────────────────────────────────
+dist/
+build/
+*.egg-info/
+*.egg
+.eggs/
+wheels/
+
+# ── Environment & Secrets ────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Uploaded Files (runtime data, not source code) ───────────
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# ── Vector Store / Database Files ────────────────────────────
+*.faiss
+*.pkl
+chroma_db/
+vector_store/
+*.sqlite
+*.db
+
+# ── Jupyter / IPython ────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Testing & Coverage ───────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+*.log
+
+# ── IDE & Editor ─────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+*~
+
+# ── OS-Generated Files ───────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ── Streamlit ────────────────────────────────────────────────
+.streamlit/secrets.toml
+
+# ── Temporary Files ──────────────────────────────────────────
+*.tmp
+*.temp
+*.bak
+*.orig

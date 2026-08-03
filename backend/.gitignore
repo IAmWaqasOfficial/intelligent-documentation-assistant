@@ -1,23 +1,34 @@
-# Python
-__pycache__/
-*.py[cod]
-*.pyo
+# =============================================================
+# Backend-specific .gitignore
+# (Root .gitignore handles most rules — this is supplementary)
+# =============================================================
 
 # Virtual environment
 venv/
 .venv/
 
-# Environment variables
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyc
+
+# Environment secrets
 .env
 
-# Uploaded files
+# Uploaded runtime files (keep folder, ignore contents)
 uploads/*
 !uploads/.gitkeep
 
-# IDE
-.vscode/
-.idea/
+# Vector / DB files generated at runtime
+*.faiss
+*.pkl
+chroma_db/
+vector_store/
+*.db
+*.sqlite
 
-# OS
-.DS_Store
-Thumbs.db
+# Test cache
+.pytest_cache/
+.coverage
+htmlcov/
