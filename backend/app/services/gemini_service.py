@@ -35,3 +35,31 @@ Answer:
     )
 
     return response.text
+
+
+
+def generate_summary(document_text: str):
+
+    prompt = f"""
+You are an AI document analysis assistant.
+
+Analyze the following document and provide:
+
+1. Overview:
+Give a short explanation of what this document is about.
+
+2. Key Points:
+Provide the most important points in bullet form.
+
+Document:
+{document_text}
+
+Summary:
+"""
+
+    response = client.models.generate_content(
+        model="gemini-2.5-flash",
+        contents=prompt
+    )
+
+    return response.text
